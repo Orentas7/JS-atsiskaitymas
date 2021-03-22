@@ -27,10 +27,14 @@ addTask.addEventListener('click', () => {
     div.appendChild(buttonCreate("MoveToDone", "Move to Done"));
     toDo.appendChild(div);    
     document.getElementById("todo-input").value = "";
-    var button1 = document.querySelector(".Delete");
-    var button2 = document.querySelector(".MoveToDone");
-    button1.classList.add("btn", "btn-danger");
-    button2.classList.add("btn", "btn-success");
+    var button1 = document.querySelectorAll(".Delete");
+    var button2 = document.querySelectorAll(".MoveToDone");
+    for (i = 0; i < button1.length; i++) {
+        button1[i].classList.add("btn", "btn-danger");        
+    }
+    for (i = 0; i < button2.length; i++) {
+        button2[i].classList.add("btn", "btn-success");        
+    }
     }    
 })
 // istrinam taska
@@ -51,10 +55,14 @@ toDo.addEventListener("click", (e) => {
         div.appendChild(buttonCreate("MoveBack", "Move Back"));
         dones.appendChild(div);
         e.target.closest("div").remove();
-        var button1 = document.querySelector(".Delete");
-        var button2 = document.querySelector(".MoveBack");
-        button1.classList.add("btn", "btn-danger");
-        button2.classList.add("btn", "btn-success");        
+        var button1 = document.querySelectorAll(".Delete");
+        var button3 = document.querySelectorAll(".MoveBack");
+        for (i = 0; i < button1.length; i++) {
+            button1[i].classList.add("btn", "btn-danger");        
+        }
+        for (i = 0; i < button3.length; i++) {
+            button3[i].classList.add("btn", "btn-success");        
+        }   
     }
 })
 // trinam permesta taska
@@ -75,9 +83,13 @@ dones.addEventListener("click", (e) => {
         div.appendChild(buttonCreate("MoveToDone", "Move to Done"));
         toDo.appendChild(div);
         e.target.closest("div").remove();
-        var button1 = document.querySelector(".Delete");
-        var button2 = document.querySelector(".MoveToDone");
-        button1.classList.add("btn", "btn-danger");
-        button2.classList.add("btn", "btn-success")
+        var button1 = document.querySelectorAll(".Delete");
+        var button2 = document.querySelectorAll(".MoveToDone");
+        for (i = 0; i < button1.length; i++) {
+            button1[i].classList.add("btn", "btn-danger");        
+        }
+        for (i = 0; i < button2.length; i++) {
+            button2[i].classList.add("btn", "btn-success");        
+        }  
     }
 })
