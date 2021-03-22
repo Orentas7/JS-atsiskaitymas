@@ -1,0 +1,11 @@
+#todos div {
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid lightgrey;
+}
+#dones div {
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid lightgrey;
+}
+
